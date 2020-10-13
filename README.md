@@ -1,7 +1,7 @@
 ## 相关issues
 
-> https://issues.redhat.com/browse/RESTEASY-2519
-> [WFLY-7419 Include RESTEasy WADL module - Red Hat Issue Tracker](https://issues.redhat.com/browse/WFLY-7419)
+* https://issues.redhat.com/browse/RESTEASY-2519
+* [WFLY-7419 Include RESTEasy WADL module - Red Hat Issue Tracker](https://issues.redhat.com/browse/WFLY-7419)
 
 
 ## 部署至wildfly
