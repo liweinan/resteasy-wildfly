@@ -7,7 +7,7 @@
 ## 部署至wildfly
 
 ```bash
-[standalone@localhost:9990 /] deploy resteasy-xss-wildfly/target/resteasy-wildfly.war --force
+[standalone@localhost:9990 /] deploy resteasy-wildfly/target/resteasy-wildfly.war --force
 ```
 
 ## RESTEASY-2519
