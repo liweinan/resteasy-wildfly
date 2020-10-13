@@ -1,4 +1,4 @@
-package io.weli.resteasy.xss;
+package io.weli.resteasy.wildfly;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

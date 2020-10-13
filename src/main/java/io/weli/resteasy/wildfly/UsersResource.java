@@ -1,4 +1,4 @@
-package io.weli.resteasy.xss;
+package io.weli.resteasy.wildfly;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
