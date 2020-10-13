@@ -1,22 +1,26 @@
-相关issue：
+## 相关issues
 
 > https://issues.redhat.com/browse/RESTEASY-2519
+> [WFLY-7419 Include RESTEasy WADL module - Red Hat Issue Tracker](https://issues.redhat.com/browse/WFLY-7419)
+
+
+## 部署至wildfly
+
+```bash
+[standalone@localhost:9990 /] deploy resteasy-xss-wildfly/target/resteasy-wildfly.war --force
+```
+
+## RESTEASY-2519
 
 正常访问：
 
 ```bash
-$ http "localhost:8080/resteasy-xss-wildfly/rest/users?paging=1"
+$ http "localhost:8080/resteasy-wildfly/rest/users?paging=1"
 ```
 
 访问有问题的服务：
 
 ```bash
-$ http "http://localhost:8080/resteasy-xss-wildfly/rest/users?paging=0%2c-1sp137%3Cscript%3Ealert(1)%3C%2fscript%3Emzx4u"
-```
-
-部署：
-
-```bash
-[standalone@localhost:9990 /] deploy resteasy-xss-wildfly/target/resteasy-xss-wildfly.war --force
+$ http "http://localhost:8080/resteasy-wildfly/rest/users?paging=0%2c-1sp137%3Cscript%3Ealert(1)%3C%2fscript%3Emzx4u"
 ```
 
