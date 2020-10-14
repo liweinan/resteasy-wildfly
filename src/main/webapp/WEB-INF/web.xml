@@ -4,4 +4,5 @@
     <!--必须是`web-app 3.0`才能零配置-->
     <!--<web-app>-->
     <display-name>resteasy-wildfly</display-name>
+
 </web-app>
