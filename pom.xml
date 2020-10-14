@@ -20,7 +20,7 @@
     </licenses>
 
     <properties>
-        <resteasy.ver>4.5.8.Final</resteasy.ver>
+        <resteasy.ver>4.6.0-SNAPSHOT</resteasy.ver>
         <javax.servlet.ver>4.0.1</javax.servlet.ver>
     </properties>
 
