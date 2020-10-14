@@ -2,6 +2,7 @@
 
 * https://issues.redhat.com/browse/RESTEASY-2519
 * [WFLY-7419 Include RESTEasy WADL module - Red Hat Issue Tracker](https://issues.redhat.com/browse/WFLY-7419)
+* [RESTEasy: RESTEasy WADL Grammar Support| JBoss.org Content Archive (Read Only)](https://developer.jboss.org/en/resteasy/blog/2018/10/31/resteasy-wadl-grammar-support)
 
 
 ## 部署至wildfly
