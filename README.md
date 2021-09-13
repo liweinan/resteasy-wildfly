@@ -16,7 +16,7 @@
 正常访问：
 
 ```bash
-$ http "localhost:8080/resteasy-wildfly/rest/users?paging=1"
+$ curl "localhost:8080/resteasy-wildfly/rest/users?paging=1"
 ```
 
 访问有问题的服务：
