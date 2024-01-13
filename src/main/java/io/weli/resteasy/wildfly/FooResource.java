@@ -7,12 +7,13 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("/users")
-public class UsersResource {
+@Path("/")
+public class FooResource {
 
+    @Path("/ok")
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public Integer page(@QueryParam("paging") Integer page) {
-        return page;
+    public String ok() {
+        return "OK";
     }
 }
