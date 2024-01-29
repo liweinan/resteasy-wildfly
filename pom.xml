@@ -33,6 +33,7 @@
         <version.maven.wildfly.plugin>5.0.0.Beta2</version.maven.wildfly.plugin>
         <version.rest-assured>5.4.0</version.rest-assured>
         <version.junit>4.13.2</version.junit>
+        <version.wildfly>30.0.1.Final</version.wildfly>
     </properties>
 
     <dependencies>
@@ -106,8 +107,18 @@
                         <galleon.offline>false</galleon.offline>
                         <jboss-fork-embedded>true</jboss-fork-embedded>
                     </galleon-options>
+                    <discover-provisioning-info>
+                        <version>${version.wildfly}</version>
+                        <failsOnError>false</failsOnError>
+                    </discover-provisioning-info>
                 </configuration>
                 <executions>
+                    <execution>
+                        <id>wildfly-glow-provision</id>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                    </execution>
                     <execution>
                         <id>wildfly-start</id>
                         <phase>pre-integration-test</phase>
