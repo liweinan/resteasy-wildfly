@@ -20,15 +20,19 @@
 package io.weli.resteasy.wildfly;
 
 
-import io.restassured.RestAssured;
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.ClientBuilder;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class SimpleIT {
     @Test
-    public void testSimple() throws Exception {
-        Assertions.assertEquals("OK",
-                RestAssured.given().baseUri("http://localhost/resteasy-wildfly").basePath("/ok").port(8080)
-                        .get().asString());
+    public void testSimple() {
+        try (Client client = ClientBuilder.newClient()) {
+            Assertions.assertEquals("OK",
+                    client.target("http://localhost:8080/resteasy-wildfly/ok")
+                            .request()
+                            .get(String.class));
+        }
     }
 }

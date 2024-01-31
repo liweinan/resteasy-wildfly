@@ -30,13 +30,20 @@
     <properties>
         <version.jakarta.ws.rs-api>3.1.0</version.jakarta.ws.rs-api>
         <version.maven.wildfly.plugin>5.0.0.Beta3</version.maven.wildfly.plugin>
-        <version.rest-assured>5.4.0</version.rest-assured>
+        <version.org.jboss.resteasy>6.2.7.Final</version.org.jboss.resteasy>
         <version.org.junit>5.10.1</version.org.junit>
         <version.wildfly>31.0.0.Final</version.wildfly>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.jboss.resteasy</groupId>
+                <artifactId>resteasy-bom</artifactId>
+                <version>${version.org.jboss.resteasy}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
             <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
@@ -54,17 +61,16 @@
             <version>${version.jakarta.ws.rs-api}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>io.rest-assured</groupId>
-            <artifactId>rest-assured</artifactId>
-            <version>${version.rest-assured}</version>
-            <scope>test</scope>
-        </dependency>
 
         <!-- Test Dependencies -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-client</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
