@@ -21,13 +21,13 @@ package io.weli.resteasy.wildfly;
 
 
 import io.restassured.RestAssured;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class SimpleIT {
     @Test
     public void testSimple() throws Exception {
-        Assert.assertEquals("OK",
+        Assertions.assertEquals("OK",
                 RestAssured.given().baseUri("http://localhost/resteasy-wildfly").basePath("/ok").port(8080)
                         .get().asString());
     }
