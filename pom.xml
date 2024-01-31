@@ -22,21 +22,26 @@
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.html</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <properties>
-        <resteasy.ver>6.2.7.Final</resteasy.ver>
-        <jakarta.servlet.ver>6.0.0</jakarta.servlet.ver>
+        <version.jakarta.ws.rs-api>3.1.0</version.jakarta.ws.rs-api>
         <version.maven.wildfly.plugin>5.0.0.Beta3</version.maven.wildfly.plugin>
         <version.rest-assured>5.4.0</version.rest-assured>
         <version.junit>4.13.2</version.junit>
-        <version.wildfly>30.0.1.Final</version.wildfly>
+        <version.wildfly>31.0.0.Final</version.wildfly>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta.ws.rs-api</artifactId>
+            <version>${version.jakarta.ws.rs-api}</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -49,35 +54,6 @@
             <version>${version.junit}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>${jakarta.servlet.ver}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-core-spi</artifactId>
-            <version>${resteasy.ver}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-core</artifactId>
-            <version>${resteasy.ver}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-servlet-initializer</artifactId>
-            <version>${resteasy.ver}</version>
-            <scope>provided</scope>
-        </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>org.jboss.resteasy</groupId>-->
-        <!--            <artifactId>resteasy-wadl</artifactId>-->
-        <!--            <version>${resteasy.ver}</version>-->
-        <!--        </dependency>-->
     </dependencies>
 
     <build>
