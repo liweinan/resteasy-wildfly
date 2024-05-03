@@ -28,7 +28,7 @@
     </licenses>
 
     <properties>
-        <version.jakarta.ws.rs-api>3.1.0</version.jakarta.ws.rs-api>
+        <version.jakarta.ws.rs-api>4.0.0</version.jakarta.ws.rs-api>
         <version.maven.wildfly.plugin>5.0.0.Final</version.maven.wildfly.plugin>
         <version.org.jboss.resteasy>6.2.8.Final</version.org.jboss.resteasy>
         <version.org.junit>5.10.2</version.org.junit>
